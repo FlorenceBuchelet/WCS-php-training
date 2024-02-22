@@ -1,7 +1,17 @@
 <?php require 'inc/head.php'; ?>
+<?php session_start(); ?>
 <section class="cookies container-fluid">
     <div class="row">
-        TODO : Display shopping cart items from $_SESSION here.
+        <?php foreach ($_SESSION['cart'] as $id => $cookie) { ?>
+            <h3>
+                <?= $cookie['name']; ?>
+            </h3>
+            <p>
+                <?= $cookie['description']; ?>
+            </p>
+            <p>
+                <?= $cookie['quantity']; ?>
+        <?php } ?>
     </div>
 </section>
 <?php require 'inc/foot.php'; ?>
