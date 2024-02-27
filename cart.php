@@ -3,14 +3,9 @@
 <section class="cookies container-fluid">
     <div class="row">
         <?php foreach ($_SESSION['cart'] as $id => $cookie) { ?>
-            <h3>
-                <?= $cookie['name']; ?>
-            </h3>
-            <p>
-                <?= $cookie['description']; ?>
-            </p>
-            <p>
-                <?= $cookie['quantity']; ?>
+            <h3><?= $cookie['name']; ?></h3>
+            <p><?= $cookie['description']; ?></p>
+            <p><?= $cookie['quantity']; ?></p>
         <?php } ?>
     </div>
 </section>
